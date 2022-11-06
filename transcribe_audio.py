@@ -4,10 +4,10 @@ import json
 
 
 def transcribe_audio(filepath):
-    model = replicate.models.get("cjwbw/whisper")
+    model = replicate.models.get("openai/whisper")
     return model.predict(
         audio=open(filepath, "rb"),
-        model="small",
+        model="large",
         translate=True
     )
 
